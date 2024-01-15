@@ -1,0 +1,66 @@
+---
+import Layout from '@app/layouts/Layout.astro';
+import Headline from "@app/components/Headline.tsx";
+import HeadRainBow from '@app/components/layout/HeadRainBow';
+
+
+const siteProps = {
+  menu: 'product',
+	title: '招聘 - 捷成',
+};
+---
+
+<Layout {...siteProps}>
+  <HeadRainBow />
+  <div class="bg-info pb-12 text-base lg:text-xl">
+    <div class="px-6 lg:px-0 bg-[#fff] py-8 lg:py-16">
+      <div class="container mx-auto w-auto lg:w-[55rem]">
+        <h2 class="text-2xl font-semibold mb-6 lg:mb-7">校园招聘</h2>
+        <a class="flex justify-center items-center text-info text-base lg:text-xl bg-[url('/src/resource/img/product/btn.png')] bg-no-repeat bg-cover bg-center w-[7.5rem] lg:w-[11.25rem] h-10 lg:h-[3.75rem] text-center align-middle" href="">详细介绍</a>
+      </div>
+    </div>
+    <div class="bg-info py-8 lg:py-20">
+      <div class="px-6 lg:px-0 container mx-auto lg:w-[55rem]">
+        <h2 class="text-2xl font-semibold mb-6 lg:mb-7">社会招聘</h2>
+        <ul>
+          <li>
+            <h3 class="text-xl lg:text-2xl mt-3 lg:mt-8">研发</h3>
+            <div>
+              <h4 class="text-base lg:text-xl mt-5 lg:mt-10 mb-4 lg:mb-6">工作职责:</h4>
+              <p>
+                <dl>
+                  <dd>1.负责公司医疗器械产品机械结构设计和开发；</dd>
+                  <dd>2.参与产品塑胶件、机加件及钣金件的加工流程及工艺标准的制定；</dd>
+                  <dd>3.制定和完善产品的质量标准及生产工艺流程，编制产品生产工艺文件、作业指导书等；</dd>
+                  <dd>4.负责外部供应商的沟通和物料的跟踪；</dd>
+                </dl>
+              </p>
+              <h4 class="text-base lg:text-xl mt-5 lg:mt-10 mb-4 lg:mb-6">任职资格:</h4>
+              <dl>
+                <dd>1.机电一体化、机械设计、机械制造及自动化、精密仪器及相关专业本科以上学历；</dd>
+                <dd>2.具有机械结构或传动设计工作经验，能独立完成产品方案设计与详细设计；</dd>
+                <dd>3.熟悉二类、三类相关医疗器械产品法规要求，具备机械结构设计、注塑件设计等实操经验；</dd>
+                <dd>4.熟练掌握常见绘图软件（CAD，solidworks，PRO-E等）；</dd>
+                <dd>5.3年以上工作经验，有工业设计的经验优先。</dd>
+              </dl>
+              <h4 class="text-base lg:text-xl mt-5 lg:mt-10 mb-4 lg:mb-6">简历投递邮箱:</h4>
+              <dl>
+                <dd>hr@jecanmed.com，请备注应聘岗位。</dd>
+              </dl>
+              <h4 class="text-base lg:text-xl mt-5 lg:mt-10 mb-4 lg:mb-6">工作地点:</h4>
+              <dl>
+                <dd>宁波：宁波市北仑区霞浦街道霞浦工业园区 10 号楼 </dd>
+                <dd>上海：上海市闵行区浦江镇 浦江科技广场 21 号楼</dd>
+              </dl>
+              <h4 class="text-base lg:text-xl mt-5 lg:mt-10 mb-4 lg:mb-6">咨询电话:</h4>
+              <dl>
+                <dd>13858020186 常女士</dd>
+                <dd class="mt-0 lg:mt-7">期待你的加入！</dd>
+              </dl>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</Layout>

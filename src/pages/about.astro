@@ -1,0 +1,100 @@
+---
+import Layout from '@app/layouts/Layout.astro';
+import HeadRainBow from '@app/components/layout/HeadRainBow';
+
+import about from '@app/resource/img/about/about.jpg';
+import mission from '@app/resource/img/about/mission.jpg';
+import aboutMobile from '@app/resource/img/about/about-mobile.png';
+import missionMobile from '@app/resource/img/about/mission-mobile.png';
+
+import history202104 from '@app/resource/img/about/history202104.png';
+import history202110 from '@app/resource/img/about/history202110.png';
+import history202307 from '@app/resource/img/about/history202307.png';
+import history202201 from '@app/resource/img/about/history202201.png';
+
+const siteProps = {
+  menu: 'about',
+	title: '关于我们 - 捷成',
+};
+---
+
+<Layout {...siteProps}>
+  <HeadRainBow />
+  <div class="bg-info pb-20">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col lg:flex-row pt-8 lg:pt-20">
+        <img class="w-full lg:w-1/2 h-full rounded-2xl lg:rounded-none hidden lg:block" src={about.src} alt="关于捷成">
+        <img class="w-full lg:w-1/2 h-full rounded-2xl lg:rounded-none block lg:hidden" src={aboutMobile.src} alt="关于捷成">
+        <div class="grow flex flex-col justify-center ml-0 lg:ml-24">
+          <h2 class="text-[28px] text-primary font-semibold mt-6 lg:mt-0 mb-5 lg:mb-7">
+            关于捷成
+          </h2>
+          <p class=" text-base lg:text-lg text-primary">
+            浙江捷成医疗科技有限公司创始于 2021 年，是一家专注于乳腺健康的创新医疗技术公司，总部位于中国东南重要的港口城市-宁波。公司核心业务覆盖乳腺疾病筛查、诊断、治疗和术后康复等细分领域，建立了经验丰富的产品研发，质量和市场准入专业团队，拥有 2500 平米的研发生产基地和先进的研发生产设备。
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-col-reverse lg:flex-row items-center mt-10 lg:mt-20">
+        <div class="flex flex-col justify-center mr-0 lg:mr-24">
+          <div class="my-5">
+            <h2 class="text-[28px] text-primary font-semibold mb-5 lg:mb-3">
+              使命
+            </h2>
+            <p class="text-base lg:text-lg">
+              以科技与创新持续提升乳腺疾病诊疗水平，为女性带来健康和更好的生活品质。
+            </p>
+          </div>
+          <div class="my-5">
+            <h2 class="text-[28px] text-primary font-semibold mb-5 lg:mb-3">
+              愿景
+            </h2>
+            <p class="text-base lg:text-lg">
+              成为中国乳腺健康医疗技术和产品的领导者。
+            </p>
+          </div>
+          <div class="my-5">
+            <h2 class="text-[28px] text-primary font-semibold mb-5 lg:mb-3">
+              质量方针
+            </h2>
+            <p class="text-base lg:text-lg">
+              卓越品质，科学管理，持续改进，竭诚服务。
+            </p>
+          </div>
+        </div>
+        <img class="w-auto lg:w-1/2 h-full hidden rounded-2xl lg:rounded-none lg:block" src={mission.src} alt="使命 愿景">
+        <img class="w-auto lg:w-1/2 block rounded-2xl lg:rounded-none lg:hidden" src={missionMobile.src} alt="使命 愿景">
+      </div>
+    </div>
+  </div>
+  <div class="pb-24 lg:pb-36">
+    <div class="container mx-auto text-center overflow-hidden">
+      <h2 class="text-[28px] font-semibold mt-11 lg:mt-20">公司发展历程</h2>
+      <div class="flex justify-center mt-10 lg:mt-48 relative left-4 lg:left-64">
+        <div class="relative before:content[' '] before:w-1 before:absolute before:block before:bg-[#000] before:left-[6px] before:h-[calc(100%-24rem)] lg:before:h-[calc(100%-22rem)] xl:before:h-[calc(100%-26.5rem)]">
+          <ul class="text-[28px]">
+            <li class="relative mb-8 lg:mb-0">
+              <span class="rounded-full w-4 h-4 block bg-[#000]"></span>
+              <p class="flex text-base lg:text-[28px] relative -top-10 lg:-top-8 left-8">2021.04</p>
+              <img class="w-4/5 lg:w-4/5 xl:w-auto relative left-8 lg:-left-[30rem] xl:-left-[38rem] -top-8 lg:-top-32" src={history202104.src} alt="2021.04">
+            </li>
+            <li class="relative mb-8 lg:mb-0">
+              <span class="rounded-full w-4 h-4 block bg-[#000]"></span>
+              <p class="flex text-base lg:text-[28px] relative -top-10 lg:-top-8 left-8 lg:-left-36">2021.10</p>
+              <img class="w-4/5 lg:w-4/5 xl:w-auto relative left-8 lg:left-16 xl:left-16 -top-8 lg:-top-32" src={history202110.src} alt="2021.10">
+            </li>
+            <li class="relative mb-8 lg:mb-0">
+              <span class="rounded-full w-4 h-4 block bg-[#000]"></span>
+              <p class="flex text-base lg:text-[28px] relative -top-10 lg:-top-8 left-8">2022.01</p>
+              <img class="w-4/5 lg:w-4/5 xl:w-auto relative left-8 lg:-left-[30rem] xl:-left-[38rem] -top-8 lg:-top-32" src={history202201.src} alt="2022.01">
+            </li>
+            <li class="relative mb-8 lg:mb-0">
+              <span class="rounded-full w-4 h-4 block bg-[#000]"></span>
+              <p class="flex text-base lg:text-[28px] relative -top-10 lg:-top-8 left-8 lg:-left-36">2023.07</p>
+              <img class="w-4/5 lg:w-4/5 xl:w-auto relative left-8 lg:left-16 xl:left-16 -top-8 lg:-top-32" src={history202307.src} alt="2023.07">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

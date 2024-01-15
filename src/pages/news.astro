@@ -1,0 +1,87 @@
+---
+import Layout from '@app/layouts/Layout.astro';
+import More from "@app/components/More.tsx";
+import HeadRainBow from '@app/components/layout/HeadRainBow';
+
+import news1 from "@app/resource/img/news/news1.png";
+import news2 from "@app/resource/img/news/news2.png";
+import news3 from "@app/resource/img/news/news3.png";
+import news4 from "@app/resource/img/news/news4.png";
+import news5 from "@app/resource/img/news/news5.png";
+import news6 from "@app/resource/img/news/news6.png";
+
+const siteProps = {
+  menu: 'news',
+	title: '资讯中心 - 捷成',
+};
+---
+
+<Layout {...siteProps}>
+  <HeadRainBow />
+  <div class="pb-12 lg:pb-36 bg-info">
+    <div class="container mx-auto px-6">
+      <dl>
+        <dt>
+          <h3 class="text-2xl lg:text-4xl text-primary font-semibold py-6 lg:py-20">行业信息</h3>
+        </dt>
+        <dd>
+          <ul>
+            <li class="mb-8 lg:mb-12">
+              <a class="flex flex-col lg:flex-row items-start lg:items-center text-base lg:text-3xl font-semibold text-primary" href="">
+                <img class="w-full lg:w-[30rem] mb-6 lg:mb-0 mr-0 lg:mr-10" src={news1.src} alt="乳腺疾病是中国女性健康的重要威胁有利政策加速">
+                乳腺疾病是中国女性健康的重要威胁有利政策加速
+              </a>
+            </li>
+            <li class="mb-8 lg:mb-12">
+              <a class="flex flex-col lg:flex-row items-start lg:items-center text-base lg:text-3xl font-semibold text-primary" href="">
+                <img class="w-full lg:w-[30rem] mb-6 lg:mb-0 mr-0 lg:mr-10" src={news2.src} alt="有利政策加速国产替代乳腺疾病是中国女性健康的重要威胁">
+                有利政策加速国产替代乳腺疾病是中国女性健康的重要威胁
+              </a>
+            </li>
+          </ul>
+          <More className="mb-6 lg:mb-0" href='' />
+        </dd>
+        <dt>
+          <h3 class="text-2xl lg:text-4xl text-primary font-semibold py-6 lg:py-20">临床进展</h3>
+        </dt>
+        <dd>
+          <ul>
+            <li class="mb-8 lg:mb-12">
+              <a class="flex flex-col lg:flex-row items-start lg:items-center text-base lg:text-3xl font-semibold text-primary" href="">
+                <img class="w-full lg:w-[30rem] mb-6 lg:mb-0 mr-0 lg:mr-10" src={news3.src} alt="">
+                乳腺疾病是中国女性健康的重要威胁有利政策加速
+              </a>
+            </li>
+            <li class="mb-8 lg:mb-12">
+              <a class="flex flex-col lg:flex-row items-start lg:items-center text-base lg:text-3xl font-semibold text-primary" href="">
+                <img class="w-full lg:w-[30rem] mb-6 lg:mb-0 mr-0 lg:mr-10" src={news4.src} alt="">
+                有利政策加速国产替代乳腺疾病是中国女性健康的重要威胁
+              </a>
+            </li>
+          </ul>
+          <More className="mb-6 lg:mb-0" href='' />
+        </dd>
+        <dt>
+          <h3 class="text-2xl lg:text-4xl text-primary font-semibold py-6 lg:py-20">创新技术</h3>
+        </dt>
+        <dd>
+          <ul>
+            <li class="mb-8 lg:mb-12">
+              <a class="flex flex-col lg:flex-row items-start lg:items-center text-base lg:text-3xl font-semibold text-primary" href="">
+                <img class="w-full lg:w-[30rem] mb-6 lg:mb-0 mr-0 lg:mr-10" src={news5.src} alt="">
+                乳腺疾病是中国女性健康的重要威胁有利政策加速
+              </a>
+            </li>
+            <li class="mb-8 lg:mb-12">
+              <a class="flex flex-col lg:flex-row items-start lg:items-center text-base lg:text-3xl font-semibold text-primary" href="">
+                <img class="w-full lg:w-[30rem] mb-6 lg:mb-0 mr-0 lg:mr-10" src={news6.src} alt="">
+                有利政策加速国产替代乳腺疾病是中国女性健康的重要威胁
+              </a>
+            </li>
+          </ul>
+          <More className="mb-6 lg:mb-0" href='' />
+        </dd>
+      </dl>
+    </div>
+  </div>
+</Layout>

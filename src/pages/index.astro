@@ -1,0 +1,110 @@
+---
+import Layout from "@app/layouts/Layout.astro";
+import Headline from "@app/components/Headline.tsx";
+import More from "@app/components/More.tsx";
+import MySwiper from "@app/components/MySwiper.tsx";
+
+import homeBanner1 from "@app/resource/img/home-banner1.jpg";
+import mobileHomeBanner1 from '@app/resource/img/home-banner1-mobile.jpg';
+
+import homeProduct1 from "@app/resource/img/home-product-1.jpg";
+import homeProduct2 from "@app/resource/img/home-product-2.jpg";
+import homeProduct3 from "@app/resource/img/home-product-3.jpg";
+import homeProduct4 from "@app/resource/img/home-product-4.jpg";
+import homeProductA from "@app/resource/img/home-product-a.png";
+import homeProductMore from "@app/resource/img/home-product-more.png";
+import homeAbount from "@app/resource/img/home-about.png";
+import homeNews1 from "@app/resource/img/home-news-1.png";
+import homeNews2 from "@app/resource/img/home-news-2.png";
+
+const siteProps = {
+  title: "捷成",
+};
+const pageProps = {
+  swiper: [{ title: "swiper1", img: homeBanner1.src, mobileImg: mobileHomeBanner1.src }],
+};
+---
+
+<Layout {...siteProps}>
+  <div class="pb-20 lg:pb-36 bg-info">
+    <MySwiper client:load swiper={pageProps.swiper} />
+    <section class="px-2 sm:px-0 container mx-auto mt-12 lg:mt-24">
+      <Headline className="mx-2 lg:mx-0" heading="产品系列" explain="Product Line" />
+      <ul class="flex flex-wrap sm:flex-nowrap">
+        <li class="flex items-center justify-center w-1/2 h-auto lg:h-80 lg:w-80 mr-0 lg:mr-5 mb-3 lg:mb-0">
+          <a class="flex flex-col items-center justify-center mx-2 lg:mx-0 pt-4 pb-3 lg:py-0 bg-[#fff] rounded-2xl w-full h-full text-2xl border-[1px] border-[#fff] hover:border-[1px] hover:border-[#012343] font-semibold text-primary" href="/product/breast-specimen-imaging">
+            <img class="mb-0 lg:mb-6" src={homeProduct1.src} alt="乳腺标本成像">
+            <div class="text-regular flex items-center text-base lg:text-2xl">
+              乳腺标本成像 <img class="ml-2 lg:ml-4 h-fit" src={homeProductA.src} alt="a">
+            </div>
+          </a>
+        </li>
+        <li class="flex items-center justify-center w-1/2 h-auto lg:h-80 lg:w-80 mr-0 lg:mr-5 mb-3 lg:mb-0">
+          <a class="flex flex-col items-center justify-center mx-2 lg:mx-0 pt-4 pb-3 lg:py-0 bg-[#fff] rounded-2xl w-full h-full text-2xl border-[1px] border-[#fff] hover:border-[1px] hover:border-[#012343] font-semibold text-primary" href="/product/breast-specimen-imaging">
+            <img class="mb-0 lg:mb-6" src={homeProduct2.src} alt="乳腺活检旋切">
+            <div class="text-regular flex items-center text-base lg:text-2xl">
+              乳腺活检旋切 <img class="ml-2 lg:ml-4 h-fit" src={homeProductA.src} alt="a">
+            </div>
+          </a>
+        </li>
+        <li class="flex items-center justify-center w-1/2 h-auto lg:h-80 lg:w-80 mr-0 lg:mr-5 mb-3 lg:mb-0">
+         <a class="flex flex-col items-center justify-center mx-2 lg:mx-0 pt-4 pb-3 lg:py-0 bg-[#fff] rounded-2xl w-full h-full text-2xl border-[1px] border-[#fff] hover:border-[1px] hover:border-[#012343] font-semibold text-primary" href="/product/breast-specimen-imaging">
+            <img class="mb-0 lg:mb-6" src={homeProduct3.src} alt="组织标记示踪">
+            <div class="text-regular flex items-center text-base lg:text-2xl">
+              组织标记示踪 <img class="ml-2 lg:ml-4 h-fit" src={homeProductA.src} alt="a">
+            </div>
+          </a>
+        </li>
+        <li class="flex items-center justify-center w-1/2 h-auto lg:h-80 lg:w-80 mr-0 lg:mr-5 mb-3 lg:mb-0">
+          <a class="flex flex-col items-center justify-center mx-2 lg:mx-0 pt-4 pb-3 lg:py-0 bg-[#fff] rounded-2xl w-full h-full text-2xl border-[1px] border-[#fff] hover:border-[1px] hover:border-[#012343] font-semibold text-primary" href="/product/breast-specimen-imaging">
+            <img class="mb-0 lg:mb-6" src={homeProduct4.src} alt="乳腺腔镜手术">
+            <div class="text-regular flex items-center text-base lg:text-2xl">
+              乳腺腔镜手术 <img class="ml-2 lg:ml-4 h-fit" src={homeProductA.src} alt="a">
+            </div>
+          </a>
+        </li>
+        <li class="hidden lg:flex basis-20 items-center justify-center">
+          <a href="/product/breast-specimen-imaging" class="w-full h-full flex items-center justify-center bg-[#fff] rounded-2xl  ">
+            <img src={homeProductMore.src} alt="more" />
+          </a>
+        </li>
+      </ul>
+      <More className="block lg:hidden mx-2 lg:mx-0 mt-9" href="/product/breast-specimen-imaging" />
+    </section>
+    <section class="container mx-auto mt-16 lg:mt-24">
+      <div class="flex flex-col lg:flex-row">
+        <div class="flex flex-col mr-0 lg:mr-10 mb-6 lg:mb-0">
+          <Headline className="px-5 sm:px-0 " heading="关于我们" explain="About Us" />
+          <div class="px-5 sm:px-0 text-base lg:text-xl">
+            <p>
+              浙江捷成医疗科技有限公司创始于 2021 年，是一家专注于乳腺健康的创新医疗技术公司，总部位于中国东南重要的港口城市-宁波。公司核心业务覆盖乳腺疾病筛查、诊断、治疗和术后康复等细分领域，建立了经验丰富的产品研发，质量和市场准入专业团队，拥有 2500 平米的研发生产基地和先进的研发生产设备。 
+            </p>
+          </div>
+          <More className="hidden lg:block mt-48" href="/about" />
+        </div>
+        <div class="mb-10 lg:mb-0 lg:basis-[200rem]">
+          <img src={homeAbount.src} alt="about us">
+        </div>
+        <More className="px-5 sm:px-0 block lg:hidden" href="/about" />
+      </div>
+    </section>
+    <section class="px-5 sm:px-0 container mx-auto mt-16 lg:mt-24">
+      <Headline heading="资讯中心" explain="Information Center" />
+      <ul>
+        <li class="mb-12">
+          <a class="flex flex-col text-center lg:text-left lg:flex-row items-center text-base lg:text-3xl text-primary font-semibold" href="/news">
+            <img class="w-4/5 lg:w-[30rem] mb-7 lg:mb-0 mr-0 lg:mr-10" src={homeNews1.src} alt="乳腺疾病是中国女性健康的重要威胁有利政策加速">
+            乳腺疾病是中国女性健康的重要威胁有利政策加速
+          </a>
+        </li>
+        <li class="mb-12">
+          <a class="flex flex-col text-center lg:text-left lg:flex-row items-center text-base lg:text-3xl text-primary font-semibold" href="/news">
+            <img class="w-4/5 lg:w-[30rem] mb-7 lg:mb-0 mr-0 lg:mr-10" src={homeNews2.src} alt="有利政策加速国产替代乳腺疾病是中国女性健康的重要威胁">
+            有利政策加速国产替代乳腺疾病是中国女性健康的重要威胁  
+          </a>
+        </li>
+      </ul>
+      <More href="/news" />
+    </section>
+  </div>
+</Layout>

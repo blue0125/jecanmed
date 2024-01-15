@@ -1,0 +1,126 @@
+---
+import Layout from "@app/layouts/Layout.astro";
+import HeadRainBow from "@app/components/layout/HeadRainBow";
+
+import map from "@app/resource/img/map.png";
+
+const siteProps = {
+  menu: "contact",
+  title: "联系我们 - 捷成",
+};
+---
+
+<Layout {...siteProps}>
+  <HeadRainBow />
+  <div class="mt-6 lg:mt-24 pb-7 lg:pb-36">
+    <div class="container mx-auto">
+      <div class="map mb-18 w-auto lg:w-[50rem] mx-auto px-6">
+        <h2
+          class="text-2xl lg:text-3xl font-normal lg:font-semibold mb-5 lg:mb-8"
+        >
+          公司地址
+        </h2>
+        <div class="text-sm lg:text-2xl">
+          <p>总部位于浙江省宁波市北仑区霞浦创业园。</p>
+        </div>
+        <div class="align-center">
+          <img
+            class="w-screen lg:w-full inline-block mt-5 lg:mt-16"
+            style="display: inline-block"
+            src={map.src}
+            alt="map"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-info pt-7 lg:pt-16 pb-36">
+    <div class="container mx-auto px-6 lg:px-80">
+      <div class="contact">
+        <ul>
+          <li class="py-5">
+            <div class="text-2xl font-semibold pb-5">电话</div>
+            <p class="text-xl">0574-86831901</p>
+          </li>
+          <li class="py-5">
+            <div class="text-2xl font-semibold pb-5">邮箱</div>
+            <p class="text-xl">jecan@jecanmed.com</p>
+          </li>
+          <li class="py-5">
+            <form name="form" onsubmit="handleSubmit(event)">
+              <div class="text-2xl font-semibold pb-5">留言板</div>
+              <div class="mb-4 flex flex-col lg:flex-row justify-between">
+                <input
+                  class="text-gl h-16 rounded-2xl p-8 lg:w-1/2 lg:mr-3 w-full mt-3 lg:mt-0"
+                  style="border: 1px solid #666;"
+                  type="text"
+                  name="nickname"
+                  placeholder="称呼"
+                  maxlength="10"
+                  autocomplete="off"
+                  required
+                />
+                <input
+                  class="text-gl h-16 rounded-2xl p-8 lg:w-1/2 lg:ml-3 w-full mt-3 lg:mt-0"
+                  style="border: 1px solid #666;"
+                  type="text"
+                  name="mobile"
+                  maxlength="20"
+                  placeholder="联系电话"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div>
+                <textarea
+                  class="w-full text-gl rounded-2xl p-5 align-middle"
+                  style="border: 1px solid #666;"
+                  name="message"
+                  id=""
+                  cols="30"
+                  rows="15"
+                  maxlength="300"
+                  autocomplete="off"
+                  required
+                  placeholder="留言后将于48小时内与您取得联系，感谢您的关注。"
+                ></textarea>
+              </div>
+              <div class="mt-8 J_Submit">
+                <button
+                  type="submit"
+                  class="text-info text-xl px-8 leading-13 block rounded-xl bg-primary"
+                >提交</button>
+              </div>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<script is:inline>
+  function handleSubmit(event) {
+    event.preventDefault();
+    const myFrom = event.target;
+    const formData = new FormData(myFrom);
+    const payload = {};
+    Array.from(formData.entries()).forEach(([key, value]) => {
+      payload[key] = value;
+    });
+    fetch("/api/message", {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+      body: JSON.stringify(payload),
+    })
+      .then((response) => {
+        if (response && response.status === 200) {
+          alert("提交成功");
+        } else {
+          alert("服务器错误！请稍后重试")
+        }
+      })
+  }
+</script>

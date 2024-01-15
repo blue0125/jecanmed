@@ -1,0 +1,105 @@
+---
+import Layout from '@app/layouts/Layout.astro';
+
+import bg from "@app/resource/img/product/product-series-bg.jpg";
+// import btn from "@app/resource/img/product/btn.png";
+import featureBg from "@app/resource/img/product/feature-bg.jpg";
+import featureBgMobile from "@app/resource/img/product/feature-bg-mobile.jpg";
+import featureIcon1 from "@app/resource/img/product/feature-icon1.png";
+import featureIcon2 from "@app/resource/img/product/feature-icon2.png";
+import featureIcon3 from "@app/resource/img/product/feature-icon3.png";
+import feature from "@app/resource/img/product/feature.png";
+import featureMobile from "@app/resource/img/product/feature-mobile.png";
+import videoCover1 from "@app/resource/img/product/video1.png";
+import videoCover2 from "@app/resource/img/product/video2.png";
+import ps1 from "@app/resource/img/product/ps1.png";
+
+const siteProps = {
+  menu: 'product',
+	title: '乳腺标本成像 - 产品系列 - 捷成',
+};
+---
+<Layout {...siteProps}>
+  <div class="relative h-[35rem] lg:h-[50rem]">
+    <div class="absolute w-full h-full flex flex-col items-center justify-center">
+      <h2 class="text-3xl lg:text-5xl font-semibold text-primary">乳腺标本成像</h2>
+      <h3 class="text-base lg:text-xl mt-2 lg:mt-4 mb-8 lg:mb-16 text-center text-primary">
+        <p>名称：乳腺术中标本摄影系统</p>
+        <!-- <p>型号：Wiservision HD（睿现 HD）</p>
+        <p>用途：用于乳房手术标本成像、活检标本成像</p> -->
+      </h3>
+      <img class="h-1/2 lg:h-auto" src={ps1.src} alt="乳腺标本成像系统">
+      <a class="flex justify-center items-center text-info text-base lg:text-lg mt-8 bg-[url('/src/resource/img/product/btn.png')] bg-no-repeat bg-contain bg-center w-48 h-10 lg:h-12 text-center align-middle" href="">产品文件</a>
+    </div>
+    <img class="h-full" src={bg.src} alt="product-series">
+  </div>
+  <div class="bg-info pb-20 lg:pb-40">
+    <div class="relative overflow-hidden">
+      <div class="absolute w-full h-full flex flex-col items-center justify-center">
+        <ul class="flex flex-col lg:flex-row justify-between w-[50rem] py-4 lg:py-0 h-full lg:h-auto lg:w-[80rem] text-info text-center">
+          <li class="flex flex-col flex-1 justify-center items-center">
+            <img class=" w-[4.65rem] lg:w-24" src={featureIcon1.src} alt="名称">
+            <h3 class="text-lg lg:text-2xl font-semibold mt-2 lg:mt-6 mb-1 lg:mb-3">名称</h3>
+            <div>
+              <p class="text-base lg:text-lg">乳腺术中</p>
+              <p class="text-base lg:text-lg">标本摄影系统</p>
+            </div>
+          </li>
+          <li class="flex flex-col flex-1 justify-center items-center">
+            <img class=" w-[4.65rem] lg:w-24" src={featureIcon2.src} alt="型号">
+            <h3 class="text-lg lg:text-2xl font-semibold mt-2 lg:mt-6 mb-1 lg:mb-3">型号</h3>
+            <div>
+              <p class="text-base lg:text-lg">Wiservision HD</p>
+              <p class="text-base lg:text-lg">（睿现 HD）</p>
+            </div>
+          </li>
+          <li class="flex flex-col flex-1 justify-center items-center">
+            <img class=" w-[4.65rem] lg:w-24" src={featureIcon3.src} alt="用途">
+            <h3 class="text-lg lg:text-2xl font-semibold mt-2 lg:mt-6 mb-1 lg:mb-3">用途</h3>
+            <div>
+              <p class="text-base lg:text-lg">用于乳房手术标本成像、</p>
+              <p class="text-base lg:text-lg">活检标本成像</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <img class="hidden lg:block" src={featureBg.src} alt="feature-bg">
+      <img class="block lg:hidden w-full" src={featureBgMobile.src} alt="feature-bg">
+    </div>
+    <div class="container mx-auto mt-10 lg:mt-24">
+      <div class="flex flex-col lg:flex-row px-6 pb-12 lg:pb-3">
+        <img class="hidden lg:block lg:w-7/12" src={feature.src} alt="feature">
+        <img class="block lg:hidden w-full h-full" src={featureMobile.src} alt="feature">
+        <ul class="flex-1 ml-0 lg:ml-24 flex flex-col justify-center">
+          <li class="my-1 lg:my-2 text-base lg:text-lg text-primary">
+            <p class="text-2xl lg:text-[28px] font-semibold text-primary mt-2 lg:mt-3 mb-3">用途</p>
+            <p>用于乳房手术标本成像、活检标本成像</p>
+          </li>
+          <li class="my-1 lg:my-2 text-base lg:text-lg text-primary">
+            <p class="text-2xl lg:text-[28px] font-semibold text-primary mt-2 lg:mt-3 mb-3">特点</p>
+            <p>高效工作流程、完善安全管理、精准标本影像</p>
+          </li>
+        </ul>
+      </div>
+      <div class="text-center mt-14 lg:mt-24">
+        <h3 class="text-2xl font-semibold text-primary lg:text-4xl mb-5 lg:mb-10">
+          产品更多特点
+        </h3>
+        <ul class="flex flex-col lg:flex-row px-0 lg:px-6">
+          <li class="mx-3">
+            <a href="">
+              <img src={videoCover1.src} alt="video1">
+              <p class="text-base lg:text-2xl text-primary font-semibold mt-4 lg:mt-8 mb-5 lg:mb-0">乳腺疾病是中国女性健康的重要威胁</p>
+            </a>
+          </li>
+          <li class="mx-3">
+            <a href="">
+              <img src={videoCover2.src} alt="video2">
+              <p class="text-base lg:text-2xl text-primary font-semibold mt-4 lg:mt-8 mb-5 lg:mb-0">有利政策加速国产替代</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</Layout>

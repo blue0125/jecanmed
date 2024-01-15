@@ -1,0 +1,55 @@
+---
+import Layout from '@app/layouts/Layout.astro';
+
+import bg from "@app/resource/img/product/product-series-bg.jpg";
+import btn from "@app/resource/img/product/btn.png";
+import ps1 from "@app/resource/img/product/ps1.png";
+
+const siteProps = {
+  menu: 'product',
+	title: '产品系列 - 捷成',
+};
+---
+
+<Layout {...siteProps}>
+  <div class="relative">
+    <div class="absolute w-full h-full flex flex-col items-center justify-center">
+      <h2 class="text-5xl font-semibold text-primary">乳腺标本成像系统</h2>
+      <h3 class="text-xl mt-4 mb-16 text-primary">双向真空辅助乳房活检与旋切系统</h3>
+      <img src={ps1.src} alt="乳腺标本成像系统">
+      <a class="flex justify-center items-center text-info text-lg mt-8 bg-[url('/src/resource/img/product/btn.png')] bg-no-repeat bg-contain bg-center w-48 h-12 text-center align-middle" href="">产品文件</a>
+    </div>
+    <img src={bg.src} alt="product-series">
+  </div>
+  <div class="bg-info pb-40">
+    <section class="container mx-auto text-center">
+      <h2 class="text-4xl font-semibold pt-16 pb-20 text-primary">乳腺标本成像系统产品系列</h2>
+      <ul class="flex flex-wrap">
+        <li class="basis-1/2 flex flex-col justify-center items-center p-4">
+          <div class="bg-[#fff] flex flex-col justify-center items-center p-9 w-full">
+            <img class="w-40" src={ps1.src} alt="乳腺标本成像系统产品系列">
+            <h3 class="text-2xl font-semibold my-3">乳腺标本成像系统产品系列</h3>
+            <p class="text-xl mb-4">乳腺标本摄影系统产品系列</p>
+            <a class="flex items-center justify-center w-32 h-10 border-[1px] border-[#012343] rounded-full text-base bg-slate-200" href="/product/breast-specimen-imaging">了解更多</a>
+          </div>
+        </li>
+        <li class="basis-1/2 flex flex-col justify-center items-center p-4">
+          <div class="bg-[#fff] flex flex-col justify-center items-center p-9 w-full">
+            <img class="w-40" src={ps1.src} alt="乳腺标本成像系统产品系列">
+            <h3 class="text-2xl font-semibold my-3">乳腺标本成像系统产品系列</h3>
+            <p class="text-xl mb-4">乳腺标本摄影系统产品系列</p>
+            <a class="flex items-center justify-center w-32 h-10 border-[1px] border-[#012343] rounded-full text-base bg-slate-200" href="/product/breast-specimen-imaging">了解更多</a>
+          </div>
+        </li>
+        <li class="basis-1/2 flex flex-col justify-center items-center p-4">
+          <div class="bg-[#fff] flex flex-col justify-center items-center p-9 w-full">
+            <img class="w-40" src={ps1.src} alt="乳腺标本成像系统产品系列">
+            <h3 class="text-2xl font-semibold my-3">乳腺标本成像系统产品系列</h3>
+            <p class="text-xl mb-4">乳腺标本摄影系统产品系列</p>
+            <a class="flex items-center justify-center w-32 h-10 border-[1px] border-[#012343] rounded-full text-base bg-slate-200" href="/product/breast-specimen-imaging">了解更多</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </div>
+</Layout>
